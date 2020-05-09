@@ -1,0 +1,29 @@
+#%RAML 1.0
+title: airindia
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/32ebab77-f5f9-41a3-a5bf-2a914d882be5/ # baseUri: http//localhost:8083/api
+types:
+  flight: !include datatypes/datatype api.raml
+/satish:
+  get:
+    queryParameters:
+      from:
+      to:
+      doj:
+    responses:
+      200:
+        body:
+          application/json:
+            example: 
+              {
+                "ID":"1",
+                "airline":"SS",
+                "flightCode": "312",
+                "fromAirportCode": "NSR",
+                "departureDate": "22/2/20",
+                " emptySeat": "20",
+                 "totalSeats": "50",
+                 " price": "2000",
+                 "planeType": "king"
+              }
+            
+               
